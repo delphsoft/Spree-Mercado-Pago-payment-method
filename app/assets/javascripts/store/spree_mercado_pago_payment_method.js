@@ -12,8 +12,9 @@ MercadoPago = {
 
 $(document).ready(function() {
     checkedPaymentMethod = $('div[data-hook="checkout_payment_step"] input[type="radio"]:checked');
-    console.log(checkedPaymentMethod);
-    MercadoPago.hidePaymentSaveAndContinueButton(checkedPaymentMethod);
+    if ($('div[data-hook="checkout_payment_step"] input[type="radio"]:checked').length >0 ) {
+        MercadoPago.hidePaymentSaveAndContinueButton(checkedPaymentMethod);        
+    }
     paymentMethods = $('div[data-hook="checkout_payment_step"] input[type="radio"]').click(function (e) {
         MercadoPago.hidePaymentSaveAndContinueButton($(e.target));
     });
