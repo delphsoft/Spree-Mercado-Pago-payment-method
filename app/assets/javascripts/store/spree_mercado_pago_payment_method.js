@@ -1,7 +1,7 @@
 MercadoPago = {
     hidePaymentSaveAndContinueButton: function(paymentMethod) {
-         $('.continue').hide();
-         $('.payment-method-selector').hide();
+        // $('.continue').hide();
+        // $('.payment-method-selector').hide();
         // if (MercadoPago.paymentMethodID && paymentMethod.val() == MercadoPago.paymentMethodID) {
         //      $('.continue').hide();
         // } else {
